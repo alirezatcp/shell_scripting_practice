@@ -22,6 +22,7 @@ echo my age is ${age}.
 echo $age+2 # result is: 22+2
 echo result of age+2 operation: $(( age+2 )) # result is: 24
 
+#####################################
 # exit, let, expr, test, ${#variable}
 
 test -z $abc # see if length of abc variable=0 it exits 0 and else dont exit 0. we can see exit result by $?
@@ -35,6 +36,7 @@ echo "result of 3+age operation (with let): $num"
 
 # exit 0 # 0 for success and else for fail. to see last result, type this in terminal: $?
 
+###################################
 # if, then, else, elif
 
 my_name=reza
@@ -51,3 +53,15 @@ then
 else
 	echo "unknown"
 fi
+
+##################################
+# user inputs:
+
+name=$1 # nane=first argument user sent. (user sends argument like this when execute the file): ./hello_plus.sh username
+age=$2
+echo username is: $name and age is: $age
+
+if test -z $name; then read -p "what is your name? " name; fi
+if test -z $age; then read -p "what is your age? " age; fi
+echo given name is $name and age is $age
+
