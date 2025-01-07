@@ -1,5 +1,5 @@
-
-#!/bin/bash  # shebang: write in first of script to run script with that (starts with #!). we can use #!/usr/bin/python3 or ... (after add shebang we dont need to write bash or ... to exec file)
+#!/bin/bash
+# shebang: write in first of script to run script with that (starts with #!). we can use #!/usr/bin/python3 or ... (after add shebang we dont need to write bash or ... to exec file)
 
 ###############################
 # Author: Alireza Taaty
@@ -20,15 +20,34 @@ echo "my name is $name."
 echo my age is ${age}.
 
 echo $age+2 # result is: 22+2
-echo $(( age+2 )) # result is: 24
+echo result of age+2 operation: $(( age+2 )) # result is: 24
 
 # exit, let, expr, test, ${#variable}
 
 test -z $abc # see if length of abc variable=0 it exits 0 and else dont exit 0. we can see exit result by $?
-echo $?
+echo exit code of test -z $abc: $?
 
 length_of_name=${#name} # show length of variable
-echo $length_of_name
+echo length of name: $length_of_name
+
+let num=3+$age
+echo "result of 3+age operation (with let): $num"
+
+# exit 0 # 0 for success and else for fail. to see last result, type this in terminal: $?
+
+# if, then, else, elif
+
+my_name=reza
 
 
-exit 0 # 0 for success and else for fail. to see last result, type this in terminal: $?
+if [ $my_name == "ali" ]
+then
+	echo "my name is ali."
+
+elif [ $my_name == "reza" ]
+then
+	echo "my name is reza."
+
+else
+	echo "unknown"
+fi
