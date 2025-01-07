@@ -45,11 +45,9 @@ my_name=reza
 if [ $my_name == "ali" ]
 then
 	echo "my name is ali."
-
 elif [ $my_name == "reza" ]
 then
 	echo "my name is reza."
-
 else
 	echo "unknown"
 fi
@@ -65,3 +63,20 @@ if test -z $name; then read -p "what is your name? " name; fi
 if test -z $age; then read -p "what is your age? " age; fi
 echo given name is $name and age is $age
 
+
+################################
+# tips:
+
+unset name age; echo hey $name $age # remove variables with unset and write multi command in one line.
+
+str=hello
+echo "$str"; echo '$str' # deference between ' and "
+
+str="many       spaces"
+echo $str; echo "$str" 
+
+command1=`ls /`
+echo ls / result: $command1
+
+command2=$(ls /)
+echo "ls / result (with second way): $command2" # defference is just because using " in here
