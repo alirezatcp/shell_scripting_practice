@@ -21,3 +21,14 @@ echo my age is ${age}.
 
 echo $age+2 # result is: 22+2
 echo $(( age+2 )) # result is: 24
+
+# exit, let, expr, test, ${#variable}
+
+test -z $abc # see if length of abc variable=0 it exits 0 and else dont exit 0. we can see exit result by $?
+echo $?
+
+length_of_name=${#name} # show length of variable
+echo $length_of_name
+
+
+exit 0 # 0 for success and else for fail. to see last result, type this in terminal: $?
