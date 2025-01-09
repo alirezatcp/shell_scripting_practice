@@ -106,7 +106,24 @@ then
 	echo "empty variable is empty"
 fi
 
-if [ -n "$nempty" ]
+if [ -n "$nempty" ]  # we can use: ! -z $nempty
 then
 	echo "nempty variable is not empty"
+fi
+
+
+#############################
+# (( )) -> c-style and [[ ]]
+# with (( )) we can use c syntax:
+(( a = 5 ))
+(( a++ ))
+echo c-style: $a
+
+
+# [[ ]] is better than [ ]
+a=15 #decimal
+a_o=017 #octal
+a_h=0x0f #hex
+if [[ a_h -eq a_o  ]]; then # [ ] result wrong
+	echo a_octal is equal a_hex
 fi
