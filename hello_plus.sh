@@ -80,3 +80,33 @@ echo ls / result: $command1
 
 command2=$(ls /)
 echo "ls / result (with second way): $command2" # defference is just because using " in here
+
+
+################################
+# comparison operations
+
+# integer: -eq, -ne, -gt, -ge, -lt, -le, ==, =
+# string: ==, =, !=, -z, -n
+
+# in integers: = use to know 2 variables is equal or not like == and -eq:
+
+a=4
+b=4
+if [ $a = $b ]
+then
+	echo Done...
+fi
+
+# in strings: -z use to know is a variable empty or not. -n shows variable is not empty and we should use "
+
+empty=
+nempty='not empty'
+if [ -z $empty ]
+then
+	echo "empty variable is empty"
+fi
+
+if [ -n "$nempty" ]
+then
+	echo "nempty variable is not empty"
+fi
