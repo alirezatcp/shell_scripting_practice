@@ -218,3 +218,5 @@ for (( counter=0; counter<5; counter++ )); do # or we can use: "for num in {0..4
 done
 
 echo {A..z}
+
+# we can use "continue" and "break" in our loops like python.
