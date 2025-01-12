@@ -167,3 +167,24 @@ echo "inputs number: $#"
 # we can see file name with #0
 echo "file name is: $0"
 
+
+############################
+# while do done
+
+# we want to check $4 be y or n
+
+
+while true; do
+	read -p "do you like this? " reply
+
+	if [[ $reply == "y" ]];then
+		echo "great!!"
+		break
+	elif [[ $reply == "n" ]];then
+		echo "sorry!!!"
+		break
+	else
+		echo "please try again"
+		sleep 1
+	fi
+done
