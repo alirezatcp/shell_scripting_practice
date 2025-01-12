@@ -127,3 +127,35 @@ a_h=0x0f #hex
 if [[ a_h -eq a_o  ]]; then # [ ] result wrong
 	echo a_octal is equal a_hex
 fi
+
+
+############################
+# &&: and    ||: or
+# we can use 'man test' to know operations.
+if [[ 0==1 || 1 = 1 && 2 -eq 2 ]]; then
+	echo operation is true
+fi
+
+# we can use debug mode. to do this we should exec file like this: bash -x file.sh
+
+# we want to write a program to get third variable of user and if it is not exist touch it and if it is exists make that empty:
+
+file=$3
+
+if [[ -f $file ]]; then
+	cp /dev/null $file
+else
+	touch $file
+fi
+
+# we check code is right or not
+
+if [[ $? -ne 0 ]]; then
+	echo "something went wrong"
+	exit 1
+else
+	echo "everything is ok"
+	exit 0
+fi
+
+
