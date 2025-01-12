@@ -188,3 +188,14 @@ while true; do
 		sleep 1
 	fi
 done
+
+
+########################
+# until do done
+# just like while but in until loop continue while condition is false:
+counter=0
+echo "until loop: "
+until [[ $counter -gt 5 ]]; do
+	echo $counter
+	(( counter++ ))
+done
