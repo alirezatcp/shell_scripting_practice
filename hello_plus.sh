@@ -199,3 +199,22 @@ until [[ $counter -gt 5 ]]; do
 	echo $counter
 	(( counter++ ))
 done
+
+
+#######################
+# for _ in _ do done
+
+# bash syntax:
+echo "names with for loop:"
+namos="ali reza mohammad amir"
+for name in $names; do
+	echo $name
+done
+
+# c-style:
+echo "counter with for loop:"
+for (( counter=0; counter<5; counter++ )); do # or we can use: "for num in {0..4..1}; do" (from 0 to 4 with steps 1)
+	echo $counter
+done
+
+echo {A..z}
