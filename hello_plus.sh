@@ -155,7 +155,15 @@ if [[ $? -ne 0 ]]; then
 	exit 1
 else
 	echo "everything is ok"
-	exit 0
+	# exit 0
 fi
 
+
+############################
+# user input handling
+
+# we can know number of inputs user send us with: $#
+echo "inputs number: $#"
+# we can see file name with #0
+echo "file name is: $0"
 
