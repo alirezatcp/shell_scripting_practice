@@ -274,6 +274,7 @@ echo
 colorful(){
 	if [[ $# -ne 2 ]]; then
 		echo "colorful function get 2 inputs."
+		return 1 # we can use 0 to 255 to show func status. exit ends program but return ends just function.
 		#exit 1
 	fi
 
@@ -291,6 +292,7 @@ colorful(){
 	fi
 
 	echo -e ${color_code}${string}
+	return 0
 	#exit 0
 }
 
@@ -303,4 +305,17 @@ colorful "This is white" "x"
 echo
 
 ########################
+# return 
+add(){
+	x=$1
+	y=$2
+	(( sum = x+y ))
+	echo $sum
+}
 
+result=`add 5 10`
+echo $result
+
+echo
+
+######################
