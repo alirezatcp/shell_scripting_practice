@@ -319,3 +319,12 @@ echo $result
 echo
 
 ######################
+# source and $@
+
+# import another file to use functions inside that script(for example):
+source ./hello.sh
+
+# show all inputs:
+echo "inputs: $@"
+
+echo
