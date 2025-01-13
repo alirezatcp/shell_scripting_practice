@@ -257,3 +257,12 @@ pass_len=10
 tr -dc "a-zA-Z0-9" < /dev/urandom | head -c $pass_len
 # this command get a random str from /dev/urandom and gives it as input to tr to remove non alphabet and non numeric characters and get 10 character of it. 
 echo
+echo
+
+###########################
+# function
+say_hello(){
+	echo "Hello (a func to say hello)"
+}
+say_hello
+# if we have a variable in func, after call func we can use that variable as global variable. if we want to variable be just local and we cant use out of func, we should use 'local'.
