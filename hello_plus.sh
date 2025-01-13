@@ -220,3 +220,13 @@ done
 echo {A..z}
 
 # we can use "continue" and "break" in our loops like python.
+
+
+##########################
+# redirect
+
+# if we exec this program from another directory, it create title.txt in that directory. but we want to create here. to do that we should first come to this directory (dirname is a command to show file directory):
+cd `dirname $0`
+echo "this file is in this directory: `dirname $0`"
+read -p "print yout title: " title
+echo $title &>> titles.txt
