@@ -328,3 +328,23 @@ source ./hello.sh
 echo "inputs: $@"
 
 echo
+
+######################
+# regex 
+# [[:alnum:]]: [a-zA-Z0-9]
+# [[:alpha:]]: [a-zA-Z]
+# [[:digit:]]: [0-9]
+# [[:lower:]]: [a-z]
+# [[:upper:]]: [A-Z]
+# [[:blank:]]: [ \t]
+# to use regex we should use: =~
+# checking second input to see is numeric ot not:
+if [[ $2 =~ ^[[:digit:]]+$ ]]; then
+	echo "age is Integer"
+else
+	echo "age is not integer"
+fi
+
+echo
+
+#######################
