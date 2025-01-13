@@ -266,3 +266,41 @@ say_hello(){
 }
 say_hello
 # if we have a variable in func, after call func we can use that variable as global variable. if we want to variable be just local and we cant use out of func, we should use 'local'.
+echo
+
+###########################
+# function args
+
+colorful(){
+	if [[ $# -ne 2 ]]; then
+		echo "colorful function get 2 inputs."
+		#exit 1
+	fi
+
+	local string=$1
+	local color=$2
+	
+	if [[ $color == "red" ]]; then
+		local color_code="\e[31m"
+	elif [[ $color == "blue" ]]; then
+		local color_code="\e[34m"
+	elif [[ $color == "green" ]]; then
+		local color_code="\e[32m"
+	else # white
+		local color_code="\e[39m"
+	fi
+
+	echo -e ${color_code}${string}
+	#exit 0
+}
+
+colorful "error"
+colorful "This is red" "red"
+colorful "This is blue" "blue"
+colorful "This is green" "green"
+colorful "This is white" "x"
+
+echo
+
+########################
+
