@@ -348,3 +348,20 @@ fi
 echo
 
 #######################
+# arrays
+
+names=(amir ali reza mmd)
+# add to array:
+names+=(john anna)
+# remove reza from array (using index of reza):
+unset names[2]
+
+echo "array: ${names}"
+echo "array 0: ${names[0]}"
+echo "array 1: ${names[1]}"
+echo "all in array: ${names[@]}"
+echo "all indexes in array: ${!names[@]}"
+echo "array length: ${#names[@]}"
+
+# we can use for: for name in ${names[@]}
+
