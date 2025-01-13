@@ -364,4 +364,28 @@ echo "all indexes in array: ${!names[@]}"
 echo "array length: ${#names[@]}"
 
 # we can use for: for name in ${names[@]}
+echo
 
+########################
+# case (case in esac) and random
+echo $RANDOM # a random number between 0 to 32000
+echo $(( RANDOM%10 )) # a random number between 0 and 9
+
+# case use instead of 'if':
+
+case $1 in 
+	ali)
+		echo hi ali;;
+	reza)
+		echo hi reza;;
+	amir)
+		echo hi amir;;
+	mmd)
+		echo hi mmd;;
+	*)
+		echo hello;;
+esac
+
+echo
+
+########################
