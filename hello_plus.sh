@@ -247,3 +247,13 @@ ls -l ./test_file
 echo
 
 ###########################
+# redirect input
+
+# create password with len 10:
+# tr is a command to translate or delete charactors
+# /dev/urandom gives us a random string.
+
+pass_len=10
+tr -dc "a-zA-Z0-9" < /dev/urandom | head -c $pass_len
+# this command get a random str from /dev/urandom and gives it as input to tr to remove non alphabet and non numeric characters and get 10 character of it. 
+echo
