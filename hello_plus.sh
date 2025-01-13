@@ -21,7 +21,7 @@ echo my age is ${age}.
 
 echo $age+2 # result is: 22+2
 echo result of age+2 operation: $(( age+2 )) # result is: 24
-
+echo
 #####################################
 # exit, let, expr, test, ${#variable}
 
@@ -35,7 +35,7 @@ let num=3+$age
 echo "result of 3+age operation (with let): $num"
 
 # exit 0 # 0 for success and else for fail. to see last result, type this in terminal: $?
-
+echo
 ###################################
 # if, then, else, elif
 
@@ -51,7 +51,7 @@ then
 else
 	echo "unknown"
 fi
-
+echo
 ##################################
 # user inputs:
 
@@ -63,7 +63,7 @@ if test -z $name; then read -p "what is your name? " name; fi
 if test -z $age; then read -p "what is your age? " age; fi
 echo given name is $name and age is $age
 
-
+echo
 ################################
 # tips:
 
@@ -81,7 +81,7 @@ echo ls / result: $command1
 command2=$(ls /)
 echo "ls / result (with second way): $command2" # defference is just because using " in here
 
-
+echo
 ################################
 # comparison operations
 
@@ -111,7 +111,7 @@ then
 	echo "nempty variable is not empty"
 fi
 
-
+echo
 #############################
 # (( )) -> c-style and [[ ]]
 # with (( )) we can use c syntax:
@@ -128,7 +128,7 @@ if [[ a_h -eq a_o  ]]; then # [ ] result wrong
 	echo a_octal is equal a_hex
 fi
 
-
+echo
 ############################
 # &&: and    ||: or
 # we can use 'man test' to know operations.
@@ -158,7 +158,7 @@ else
 	# exit 0
 fi
 
-
+echo
 ############################
 # user input handling
 
@@ -167,7 +167,7 @@ echo "inputs number: $#"
 # we can see file name with #0
 echo "file name is: $0"
 
-
+echo
 ############################
 # while do done
 
@@ -189,7 +189,7 @@ while true; do
 	fi
 done
 
-
+echo
 ########################
 # until do done
 # just like while but in until loop continue while condition is false:
@@ -200,7 +200,7 @@ until [[ $counter -gt 5 ]]; do
 	(( counter++ ))
 done
 
-
+echo
 #######################
 # for _ in _ do done
 
@@ -221,7 +221,7 @@ echo {A..z}
 
 # we can use "continue" and "break" in our loops like python.
 
-
+echo
 ##########################
 # redirect
 
@@ -230,3 +230,20 @@ cd `dirname $0`
 echo "this file is in this directory: `dirname $0`"
 read -p "print yout title: " title
 echo $title &>> titles.txt
+echo title redirected to tetles.txt
+# using /dev/null
+
+# if we use this command "find / -name titles.txt" we have too many permission denied. to remove them we can redirect them to /dev/null:
+# find / -name titles.txt 2> /dev/null # I comment this line because is takes some time.
+
+echo
+# using /dev/zero
+
+# test_file is 0 b.
+ls -l ./test_file
+# we want to make it 240 b.
+head -c 240 /dev/zero &> test_file
+ls -l ./test_file
+echo
+
+###########################
