@@ -6,7 +6,7 @@
 # Version: v1.0.0
 # Date: 2025-01-06
 # Description: our practice script.
-# Usage: ./hello_plus.sh
+# Usage: ./hello_plus.sh <name> <age> <file.
 ##############################
 
 echo "Hello!!"
@@ -171,7 +171,7 @@ echo
 ############################
 # while do done
 
-# we want to check $4 be y or n
+# we want to check an input we get from user to see if yes or no.
 
 
 while true; do
@@ -389,6 +389,17 @@ esac
 echo
 
 ########################
+# parameter_expansion
 
+# we can see all in: "man bash" -> "Parameter Expansion"
 
+# if user sent $4, use that and if not use 'student'. (if user send empty string this (:-) use student)
+main_job=${4:-'student'}
 
+# '-' is like ':-' but if we send empty srting this use that and don't use default:
+second_job=${5-'freelancer'}
+
+# ':?' check if user didn't sent that, shows error to user.
+name=${1:?'name not supplied.'} # if user didn't sent $1, shows user 'name not supplied' error.
+
+echo "jobs: 1-${main_job}, 2-${second_job}"
