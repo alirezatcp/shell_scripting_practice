@@ -19,7 +19,7 @@ print_help(){
 	echo "-g for female greeting"
 }
 
-# we should give all flags to a variable. ( : is because that we handle errors ourselves and isn't matter if we write in first or last)
+# we should give all flags to a variable. ( : before arguments is because that we handle errors ourselves. but if we write after an arguman it means this arguman needs an option. for example :hb:g means b arguman need an option.)
 optstring=":hbg"
 
 # to use getopts command we should create a while loop: (options is user flag. for example if user send -bg first option will be b and in second round of while will be g)
