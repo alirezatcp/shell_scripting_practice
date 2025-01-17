@@ -403,3 +403,19 @@ second_job=${5-'freelancer'}
 name=${1:?'name not supplied.'} # if user didn't sent $1, shows user 'name not supplied' error.
 
 echo "jobs: 1-${main_job}, 2-${second_job}"
+
+#########################
+# parameter_substitutions
+
+name=$1
+echo "name from index 2 to end: ${name:2}" # shows name fron index 2 to end
+echo "name from index 2 to 4: ${name:2:4}" # shows name from index 2 to 4.
+
+# replace
+
+echo ${name/ali/ali joon} # replace just 1 ali with ali joon.
+echo ${name//ali/ali joon} # replace all ali with ali joon.
+
+echo ${name} len is: ${#name} # show length with #. # befor parameter is like len in python.
+
+
