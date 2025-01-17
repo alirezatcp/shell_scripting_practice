@@ -404,6 +404,8 @@ name=${1:?'name not supplied.'} # if user didn't sent $1, shows user 'name not s
 
 echo "jobs: 1-${main_job}, 2-${second_job}"
 
+echo
+
 #########################
 # parameter_substitutions
 
@@ -418,4 +420,22 @@ echo ${name//ali/ali joon} # replace all ali with ali joon.
 
 echo ${name} len is: ${#name} # show length with #. # befor parameter is like len in python.
 
+echo
+
+##########################
+# case modification
+
+s=happy
+
+# upper case just first letter:
+echo "${s^}"
+
+# upper case all letters:
+echo "${s^^}"
+
+# upper case h (if h is first letter of word.)
+echo "${s^h}"
+
+# upper case p (doesn't matter where is it)
+echo "${s^^p}"
 
