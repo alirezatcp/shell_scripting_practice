@@ -12,3 +12,19 @@ This script prints a simple "Hello" message and lists the contents of the user's
 echo "Hello"
 echo "This is your home content:"
 ls ~
+```
+
+2. hello_plus.sh
+
+A more advanced script that covers several shell scripting concepts such as:
+
+    Shebang (#!/bin/bash)
+    Variables
+    Arithmetic operations
+    Conditional statements (if, elif, else)
+    Loops (while, until, for)
+    Functions
+    User input handling
+
+Usage:
+
