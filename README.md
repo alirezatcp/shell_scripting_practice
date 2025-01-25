@@ -30,4 +30,14 @@ Usage:
 ```bash
 ./hello_plus.sh <name> <age>
 ```
+It prints personalized greetings, performs arithmetic, checks for empty variables, uses loops, and more.
+
+### 3. `optargs.sh`
+
+A script for file manipulation using command-line flags. It handles file operations like listing, deleting, emptying, or renaming a file based on user input flags.
+
+Usage:
+```bash
+./optargs.sh [flags] <file-name>
+```
 
