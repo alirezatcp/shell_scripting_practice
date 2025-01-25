@@ -57,4 +57,13 @@ This script demonstrates how to use `getopts` to parse command-line options and 
 - ``` -g ``` for female greeting.
 - ``` -h ``` for help.
 
-# Features Covered
+## Features Covered
+- <h4>Variables:</h4>
+- <h4>Conditionals:</h4>
+- <h4>Loops:</h4>
+- <h4>Functions:</h4>
+- <h4>File Manipulation:</h4>
+- <h4>User Input Handling:</h4>
+- <h4>Error Handling:</h4>
+- <h4>Redirection:</h4>
+- <h4>Parameter Expansion and Substitution:</h4>
