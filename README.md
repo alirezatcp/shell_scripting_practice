@@ -46,6 +46,15 @@ A script for file manipulation using command-line flags. It handles file operati
 - ``` -m <new-file-name> ``` to rename the file.
 - ``` -h ``` to display help.
 
+### 4. `opts.sh`
+This script demonstrates how to use `getopts` to parse command-line options and flags. It provides personalized greetings based on the options chosen.
+**Usage:**
+```bash
+./opts.sh [flags]
+```
+**Flags:**
+- ``` -b ``` for male greeting.
+- ``` -g ``` for female greeting.
+- ``` -h ``` for help.
 
-
-
+# Features Covered
