@@ -58,7 +58,7 @@ This script demonstrates how to use `getopts` to parse command-line options and 
 - ``` -h ``` for help.
 
 ## Features Covered
-- <h4>Variables:</h4> Creating and manipulating variables.
+- <p<<h4>Variables:</h4> Creating and manipulating variables.</p>
 - <h4>Conditionals:</h4> Using `if`, `elif`, and `else` statements to handle conditions.
 - <h4>Loops:</h4> Using `while`, `until`, and `for` loops for repetitive tasks.
 - <h4>Functions:</h4> Defining and using functions for code reusability.
