@@ -26,7 +26,7 @@ A more advanced script that covers several shell scripting concepts such as:
 - Functions
 - User input handling
 
-Usage:
+**Usage:**
 ```bash
 ./hello_plus.sh <name> <age>
 ```
@@ -36,8 +36,16 @@ It prints personalized greetings, performs arithmetic, checks for empty variable
 
 A script for file manipulation using command-line flags. It handles file operations like listing, deleting, emptying, or renaming a file based on user input flags.
 
-Usage:
+**Usage:**
 ```bash
 ./optargs.sh [flags] <file-name>
 ```
+**Flags:**
+- ``` -d ``` to delete the file.
+- ``` -e ``` to empty the file.
+- ``` -m <new-file-name> ``` to rename the file.
+- ``` -h ``` to display help.
+
+
+
 
